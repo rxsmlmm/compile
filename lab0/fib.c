@@ -1,0 +1,21 @@
+int getint();
+void putint(int);
+void putch(int);
+
+int main() {
+    int a, b, i, t, n;
+    a = 0;
+    b = 1;
+    i = 1;
+    n = getint();
+    putint(a); putch(10);
+    putint(b); putch(10);
+    while (i < n) {
+        t = b;
+        b = a + b;
+        putint(b); putch(10);
+        a = t;
+        i = i + 1;
+    }
+    return 0;
+}
